@@ -1,0 +1,15 @@
+<head>
+<title>Iris classification model</title>
+</head>
+
+<body>
+    <h1>Iris classification model</h1>
+    <form action="get_data" method="post">
+        <label>sepal_length : </label> <input type="number" step="any" name="sepal_length"><br><br>
+        <label>sepal_width : </label> <input type="number" step="any" name="sepal_width" ><br><br>
+        <label>petal_length : </label> <input type="number" step="any" name="petal_length" ><br><br>
+        <label>petal_width : </label> <input type="number" step="any" name="petal_width" ><br><br>
+        <input type="submit" name="predict">
+        <h3>{{predict_value}}</h3>
+    </form>
+</body>
