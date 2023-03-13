@@ -3,10 +3,10 @@ import pickle
 import json
 import numpy as np
 
-with open ('artifacts/model.pkl','rb') as file:
+with open (CONFIG.MODEL_PATH,'rb') as file:
     model=pickle.load(file)
 
-with open('artifacts/asset.json','r')as j_file:
+with open(CONFIG.ASSET_PATH,'r')as j_file:
     asset=json.load(j_file)
 
 col=asset['columns']
@@ -44,4 +44,4 @@ def data():
     return render_template("index.html",predict_value=iris_value)
 
 if __name__=="__main__":
-    app.run(host="0.0.0.0",port=8000,debug=False)
+    app.run(host=CONFIG.HOST_NAME,port=CONFIG.PORT_NUMBER,debug=False)
